@@ -4,19 +4,14 @@ const bodyparser = require('koa-bodyparser')
 
 const app = new Koa()
 const routes = new Router()
+routes.get('/api', (ctx) => {
+  ctx.body = {
+    name: 'fdsa',
+    age: 18
+  }
+})
 
-app.use(bodyparser({
-  enableTypes:['json', 'form', 'text']
-}))
 app.use(routes.routes(), routes.allowedMethods())
 app.listen(7070, () => {
   console.log('7070')
-})
-
-routes.get('/user', async (ctx) => {
-  console.log('进来了')
-  ctx.body = {
-    name: '工工',
-    age: 18
-  }
 })

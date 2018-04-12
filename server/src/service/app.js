@@ -11,7 +11,9 @@ const app = new Koa()
 
 const foo = async () => {
   const router = await _controllers()
-  app.use(bodyparser())
+  app.use(bodyparser({
+    enableTypes: ['json', 'form', 'text']
+  }))
   app.use(resource(path.join(__dirname, '../../dist/static')))
   app.use(router.routes(), router.allowedMethods())
 
