@@ -9,9 +9,12 @@
     "babel-register": "^6.26.0"
   },
   "dependencies": {
+    "jsonwebtoken": "^8.2.1",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
-    "koa-static": "^4.0.2"
+    "koa-session": "^5.8.1",
+    "koa-static": "^4.0.2",
+    "nodemailer": "^4.6.3"
   }
 }
